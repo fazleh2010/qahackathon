@@ -1,109 +1,19 @@
 
 <!DOCTYPE html>
-<html lang="en-GB" class="no-js no-svg">
-    
-    <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>3. Package Requirements &#8212; GATE  documentation</title>
-        <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-        <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-        <link rel="stylesheet" type="text/css" href="https://assets.readthedocs.org/static/css/badge_only.css" />
-        <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script async="async" type="text/javascript" src="https://assets.readthedocs.org/static/javascript/readthedocs-doc-embed.js"></script>
-        <link rel="canonical" href="https://opengate.readthedocs.io/en/latest/package_requirements.html" />
-        <link rel="index" title="Index" href="genindex.html" />
-        <link rel="search" title="Search" href="search.html" />
-        <link rel="next" title="4. Compiling GATE (V9.0)" href="compilation_instructions.html" />
-        <link rel="prev" title="2. Installation Guide V9.1" href="installation.html" />
 
-        <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-
-
-        <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
-
-        <!-- RTD Extra Head -->
-
-        <link rel="stylesheet" href="https://assets.readthedocs.org/static/css/readthedocs-doc-embed.css" type="text/css" />
-
-        <script type="application/json" id="READTHEDOCS_DATA">{"ad_free": true, "api_host": "https://readthedocs.org", "build_date": "2021-05-17T16:54:46Z", "builder": "sphinx", "canonical_url": null, "commit": "fa295328", "docroot": "/docs/", "features": {"docsearch_disabled": false}, "global_analytics_code": "UA-17997319-1", "language": "en", "page": "package_requirements", "programming_language": "words", "project": "opengate", "proxied_api_host": "/_", "source_suffix": ".rst", "subprojects": {}, "theme": "alabaster", "user_analytics_code": "", "version": "latest"}</script>
-
-        <!--
-        Using this variable directly instead of using `JSON.parse` is deprecated.
-        The READTHEDOCS_DATA global variable will be removed in the future.
-        -->
-        <script type="text/javascript">
-            READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerHTML);
-        </script>
-
-        <script type="text/javascript" src="https://assets.readthedocs.org/static/javascript/readthedocs-analytics.js" async="async"></script>
-
-        <!-- end RTD <extrahead> -->
-    </head>
-    
-
-    <title>Hackthon Question Answering (QueGG-Hackthon)</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>QueGG</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" integrity="sha512-aQX0wElRuvqZ1bVvsknO9jDXwvVI71vwYLuEDZ8QqMJxPozZPPCCmylpHx4ngmeIz7Bg6FfE4Ay+CfDVFqjy+A==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/quegg/style.css"/>
-
-<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-    <div class="navbar-logo col-sm-2">
-        <img src="https://scdemo.techfak.uni-bielefeld.de/qahackathon/images/pal-logo.png" class="navbar-logo" />
-    </div>
-    <a class="navbar-brand col-sm" id="sidebar-brandlink" href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/index.php">Hackthon Question Answering (QueGG-Hackthon)</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-</nav>
-    
-    
-    
-   <!--head>
-    
-    <title>Hackthon Question Answering (QueGG-Hackthon)</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>QueGG</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" integrity="sha512-aQX0wElRuvqZ1bVvsknO9jDXwvVI71vwYLuEDZ8QqMJxPozZPPCCmylpHx4ngmeIz7Bg6FfE4Ay+CfDVFqjy+A==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/quegg/style.css"/>
-
-<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-    <div class="navbar-logo col-sm-2">
-        <img src="https://scdemo.techfak.uni-bielefeld.de/qahackathon/images/pal-logo.png" class="navbar-logo" />
-    </div>
-    <a class="navbar-brand col-sm" id="sidebar-brandlink" href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/index.php">Hackthon Question Answering (QueGG-Hackthon)</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-</nav>
-   
-   
-       <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>3. Package Requirements &#8212; GATE  documentation</title>
-    <link rel="stylesheet" href="https://opengate.readthedocs.io/en/latest/_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="https://opengate.readthedocs.io/en/latest/_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="https://assets.readthedocs.org/static/css/badge_only.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="https://opengate.readthedocs.io/en/latest/_static/documentation_options.js"></script>
-    <script type="text/javascript" src="https://opengate.readthedocs.io/en/latest/_static/jquery.js"></script>
-    <script type="text/javascript" src="https://opengate.readthedocs.io/en/latest/_static/underscore.js"></script>
-    <script type="text/javascript" src="https://opengate.readthedocs.io/en/latest/_static/doctools.js"></script>
-    <script type="text/javascript" src="https://opengate.readthedocs.io/en/latest/_static/language_data.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script async="async" type="text/javascript" src="https://assets.readthedocs.org/static/javascript/readthedocs-doc-embed.js"></script>
     <link rel="canonical" href="https://opengate.readthedocs.io/en/latest/package_requirements.html" />
@@ -117,8 +27,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-
-
+ 
 <link rel="stylesheet" href="https://assets.readthedocs.org/static/css/readthedocs-doc-embed.css" type="text/css" />
 
 <script type="application/json" id="READTHEDOCS_DATA">{"ad_free": true, "api_host": "https://readthedocs.org", "build_date": "2021-05-17T16:54:46Z", "builder": "sphinx", "canonical_url": null, "commit": "fa295328", "docroot": "/docs/", "features": {"docsearch_disabled": false}, "global_analytics_code": "UA-17997319-1", "language": "en", "page": "package_requirements", "programming_language": "words", "project": "opengate", "proxied_api_host": "/_", "source_suffix": ".rst", "subprojects": {}, "theme": "alabaster", "user_analytics_code": "", "version": "latest"}</script>
@@ -129,19 +38,78 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 
 <script type="text/javascript" src="https://assets.readthedocs.org/static/javascript/readthedocs-analytics.js" async="async"></script>
 
+</head>
+    
 
-   
+ <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/gate_logo.png" alt="Logo"/>
+    
+  </a>
+</p>
 
-<div id="kopfbereich_gesamt">
-<div id="kopfbereich_folgeseite">
-<a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/index.php">home</a>&nbsp;&nbsp;|&nbsp;
-<a href="https://forms.gle/rTYj75FFUekWcWfM9">registration</a>&nbsp;&nbsp;|&nbsp;
-<a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/index.php" target=top>Back</a></div></>
 
 
-</head-->
 
-<!--body class="page-template-default page page-id-864 wp-custom-logo wp-embed-responsive group-blog page-one-column colors-light has-sidebar"-->
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="general.html">Getting started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html">2. Installation Guide V9.1</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3. Package Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compilation_instructions.html">4. Compiling GATE (V9.0)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validating_installation.html">5. Validating Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gatert.html">6. GateRT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enabling_lut_davis_model.html">7. Enabling LUT Davis Model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="general_concept.html">General concept</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imaging_applications.html">Imaging application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="radiotherapy_and_dosimetry_applications.html">Radiotherapy and dosimetry applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thermal_therapy_application.html">Thermal therapy application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parallel_computing.html">Parallel computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gate_tools.html">GateTools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vgate.html">vGate (virtual Gate)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker_gate.html">GATE using Docker</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="general.html">Getting started</a><ul>
+      <li>Previous: <a href="installation.html" title="previous chapter">2. Installation Guide V9.1</a></li>
+      <li>Next: <a href="compilation_instructions.html" title="next chapter">4. Compiling GATE (V9.0)</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+    
+    
+    
+    
+    
 <body>
 
  <div class="contents local topic" id="table-of-contents">

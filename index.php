@@ -1,17 +1,126 @@
 
 <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en-GB" class="no-js no-svg">
 <head>
-    
-    <title>QueGG Question Answering - QA</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>QueGG</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" integrity="sha512-aQX0wElRuvqZ1bVvsknO9jDXwvVI71vwYLuEDZ8QqMJxPozZPPCCmylpHx4ngmeIz7Bg6FfE4Ay+CfDVFqjy+A==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/quegg/style.css"/>
-</head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="profile" href="https://gmpg.org/xfn/11">
+
+<!--script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Hackthon on multilingual Question Answering over linked data (QueGG) &#8211; EMBEDDIA</title>
+<style-->
+#wpadminbar #wp-admin-bar-vtrts_free_top_button .ab-icon:before {
+	content: "\f185";
+	color: #1DAE22;
+	top: 3px;
+}
+</style>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<!--link rel="alternate" type="application/rss+xml" title="EMBEDDIA &raquo; Feed" href="http://embeddia.eu/feed/" /-->
+		<!--script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/embeddia.eu\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.7.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script-->
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='sdm-styles-css'  href='http://embeddia.eu/wp-content/plugins/simple-download-monitor/css/sdm_wp_styles.css?ver=5.7.2' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://embeddia.eu/wp-includes/css/dist/block-library/style.min.css?ver=5.7.2' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://embeddia.eu/wp-includes/css/dist/block-library/theme.min.css?ver=5.7.2' media='all' />
+<link rel='stylesheet' id='wpt-twitter-feed-css'  href='http://embeddia.eu/wp-content/plugins/wp-to-twitter/css/twitter-feed.css?ver=5.7.2' media='all' />
+<link rel='stylesheet' id='twentyseventeen-fonts-css'  href='https://fonts.googleapis.com/css?family=Libre+Franklin%3A300%2C300i%2C400%2C400i%2C600%2C600i%2C800%2C800i&#038;subset=latin%2Clatin-ext&#038;display=fallback' media='all' />
+<link rel='stylesheet' id='twentyseventeen-style-css'  href='http://embeddia.eu/wp-content/themes/twentyseventeen/style.css?ver=20201208' media='all' />
+<link rel='stylesheet' id='twentyseventeen-block-style-css'  href='http://embeddia.eu/wp-content/themes/twentyseventeen/assets/css/blocks.css?ver=20190105' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyseventeen-ie8-css'  href='http://embeddia.eu/wp-content/themes/twentyseventeen/assets/css/ie8.css?ver=20161202' media='all' />
+<![endif]-->
+<script id='ahc_front_js-js-extra'>
+var ahc_ajax_front = {"ajax_url":"http:\/\/embeddia.eu\/wp-admin\/admin-ajax.php","page_id":"864","page_title":"EACL Hackashop on News Media Content Analysis and Automated Report Generation","post_type":"page"};
+</script>
+<script src='http://embeddia.eu/wp-content/plugins/visitors-traffic-real-time-statistics/js/front.js?ver=5.7.2' id='ahc_front_js-js'></script>
+<script src='http://embeddia.eu/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
+<script src='http://embeddia.eu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script id='sdm-scripts-js-extra'>
+var sdm_ajax_script = {"ajaxurl":"http:\/\/embeddia.eu\/wp-admin\/admin-ajax.php"};
+</script>
+<script src='http://embeddia.eu/wp-content/plugins/simple-download-monitor/js/sdm_wp_scripts.js?ver=5.7.2' id='sdm-scripts-js'></script>
+<!--[if lt IE 9]>
+<script src='http://embeddia.eu/wp-content/themes/twentyseventeen/assets/js/html5.js?ver=20161020' id='html5-js'></script>
+<![endif]-->
+<link rel="https://api.w.org/" href="http://embeddia.eu/wp-json/" /><link rel="alternate" type="application/json" href="http://embeddia.eu/wp-json/wp/v2/pages/864" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://embeddia.eu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://embeddia.eu/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.7.2" />
+<link rel="canonical" href="http://embeddia.eu/hackashop2021/" />
+<link rel='shortlink' href='http://embeddia.eu/?p=864' />
+<link rel="alternate" type="application/json+oembed" href="http://embeddia.eu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fembeddia.eu%2Fhackashop2021%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://embeddia.eu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fembeddia.eu%2Fhackashop2021%2F&#038;format=xml" />
+<!-- Analytics by WP-Statistics v13.0.8 - https://wp-statistics.com/ -->
+<meta name="twitter:widgets:link-color" content="#000000"><meta name="twitter:widgets:border-color" content="#000000"><meta name="twitter:partner" content="tfwp"><link rel="icon" href="http://embeddia.eu/wp-content/uploads/2019/01/cropped-embeddia-small-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="http://embeddia.eu/wp-content/uploads/2019/01/cropped-embeddia-small-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="http://embeddia.eu/wp-content/uploads/2019/01/cropped-embeddia-small-1-180x180.png" />
+<meta name="msapplication-TileImage" content="http://embeddia.eu/wp-content/uploads/2019/01/cropped-embeddia-small-1-270x270.png" />
+
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="EACL Hackashop on News Media Content Analysis and Automated Report Generation"><meta name="twitter:site" content="@embeddiaproject">
+		<style id="wp-custom-css">
+			div.partnerlist {
+	display: block;
+}
+table {
+	border: none;
+}
+td.partner-name {
+	font-weight: normal;
+	white-space: nowrap;
+}
+td.partner-country {
+	font-weight: bold;
+	white-space: nowrap;
+}
+aside#secondary {
+	padding: 20px;
+	background-color: #fafafa
+}
+header.site-header {
+	background-image: url('/wp-content/uploads/2019/07/net-topleft.png');
+	background-size: cover;
+}
+footer.site-footer {
+	background-image: url('/wp-content/uploads/2019/07/net-topleft.png');
+	background-size: cover;
+}
+section.widget_recent_entries {
+	padding-bottom: 10px;
+	padding-top: 20px;
+}
+section#custom_html-3 {
+	text-align: center;
+	font-size: smaller;
+}
+section.widget_mc4wp_form_widget {
+	padding-bottom: 10px;
+}
+section#custom_html-4 {
+	text-align: center;
+	font-size: smaller;
+}		</style>
+		</head>
+
 
 <body >
 
@@ -84,15 +193,9 @@ workshop at ISWC. vol. 2722, pp. 40–55. CEUR-WS.org (2020). </p>
 <p>Philipp Cimiano (CITEC - University Bielefeld, Germany), Chair<br>Mohammad Fazleh Elahi (CITEC - University Bielefeld, Germany)<br>Frank Grimm (CITEC - University Bielefeld, Germany)<br>Basil Ell (CITEC - University Bielefeld, Germany and Department of Informatics, University of Oslo, Norway)<br></p>
 
 
-<script type="text/javascript">
-/*<![CDATA[*/
-    window.QUERY_URI = "\/quegg\/";
-    console.log("[query] endpoint:", window.QUERY_URI);
- /*]]>*/
-</script>
-<script src="/quegg/webjars/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js" integrity="sha512-Bbn2GxMX2ePx4if/heU6eS4avbu2ac+V1q2jb4mlh1WofyrKV/vm6/mMWmuzgoHQlxvgg7dPuyTtTZSX/Zgk3Q==" crossorigin="anonymous"></script>
-<script src="/quegg/main.js"></script>
+
 </body>
+
+		
 
 </html>

@@ -133,10 +133,15 @@ section#custom_html-4 {
 	<div class="site-branding">
 	<div class="wrap">
 
-		<a href="http://localhost/index.php" class="custom-logo-link" rel="home"><img width="250" height="250" src="http://localhost/images/prett.png" class="custom-logo" alt="EMBEDDIA" srcset="http://localhost/images/prett.png 250w, http://localhost/images/prett.png-150x150.png 150w, http://localhost/images/prett.png-100x100.png 100w" sizes="100vw" /></a>		
+		<a href="https://hackathon.semanticcomputing.de" class="custom-logo-link" rel="home">
+<img width="250" height="250" src="https://hackathon.semanticcomputing.de/images/prett.png" class="custom-logo" alt="EMBEDDIA" 
+srcset="https://hackathon.semanticcomputing.de/images/prett.png 250w, 
+https://hackathon.semanticcomputing.de/images/prett.png-150x150.png 150w, 
+https://hackathon.semanticcomputing.de/images/prett.png-100x100.png 100w" 
+sizes="100vw" /></a>		
 <div class="site-branding-text">
-							<p class="site-title"><a href="http://localhost/index.php" rel="home">QueGG-Hackthon</a></p>
-							<p class="site-description">Hackthon on multilingual Question Answering over linked data (QueGG)</p>					
+<p class="site-title"><a href="https://hackathon.semanticcomputing.de" rel="home">QueGG-Hackthon</a></p>
+<p class="site-description">Hackthon on multilingual Question Answering over linked data (QueGG)</p>					
 </div><!-- .site-branding-text -->
 		
 	</div><!-- .wrap -->

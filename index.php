@@ -28,24 +28,27 @@
     </button>
 </nav>
 
-
-</head>
-
-<body onload="document.getElementById('statusdisplay').innerHTML = ''" id="top">
 <div id="kopfbereich_gesamt">
 <div id="kopfbereich_folgeseite">
 <a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/index.php">home</a>&nbsp;&nbsp;|&nbsp;
 <a href="https://forms.gle/rTYj75FFUekWcWfM9">registration</a>&nbsp;&nbsp;|&nbsp;
 <a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php" target=top>Recipe</a></div></div>
+
+
+</head>
+
+<body onload="document.getElementById('statusdisplay').innerHTML = ''" id="top">
+<!--div id="kopfbereich_gesamt">
+<div id="kopfbereich_folgeseite">
+<a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/index.php">home</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://forms.gle/rTYj75FFUekWcWfM9">registration</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php" target=top>Recipe</a></div></div-->
 	
 
         <div align="justify">
-	<br>
-        <br>
 	<!--h3>Hackthon on multilingual Question Answering over linked data (QueGG)</h3-->
 	
 	<p><strong>Hackashop description</strong></p>
-	
         <p>Many question answering systems over RDF that are induced from pairs of questions and answers using some machine learning technique suffer from a lack of controllability, making the governance and incremental improvement of the system challenging, not to mention the initial effort of collecting and providing training data. As an alternative, we present a model-based approach to question answering that uses an ontology lexicon in lemon format and automatically generates a lexicalized grammar that can be used to interpret and parse questions into SPARQL queries. The approach gives maximum control over the QA system to the developer of the system as every lexicon entry added to the lexicon increases the coverage of the grammar, and thus of the QA system, in a predictable way. </p>
 	
         <p>The hackathon aims to improve the QA system on the combination of semantic web and language technologies. There are several possibilities to extend the system such as <p>
@@ -70,11 +73,9 @@
    
 
 	<p><strong>Organizing team</strong></p>
-	
         <p>Philipp Cimiano (CITEC - University Bielefeld, Germany), Chair<br>Mohammad Fazleh Elahi (CITEC - University Bielefeld, Germany)<br>Frank Grimm (CITEC - University Bielefeld, Germany)<br>Basil Ell (CITEC - University Bielefeld, Germany and Department of Informatics, University of Oslo, Norway)<br></p>
 	
 	<p><strong>References:</strong></p>
-	
 	<p>Benz, V., Cimiano, P., Elahi, M.F., Ell, B. (2020), “Generating Grammars from lemon lexica for Questions Answering over Linked Data: a Preliminary Analysis.”. In: NLIWOD workshop at ISWC. vol. 2722, pp. 40–55. CEUR-WS.org (2020).<a href="http://ceur-ws.org/Vol-2722/nliwod2020-paper-2.pdf" data-type="URL" data-id="http://ceur-ws.org/Vol-2722/nliwod2020-paper-2.pdf">[pdf]</a> </p>
 	
 </div></div>

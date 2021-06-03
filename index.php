@@ -18,7 +18,7 @@
 
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
     <div class="navbar-logo col-sm-2">
-        <img src="images/pal-logo.png" class="navbar-logo" />
+        <img src="https://scdemo.techfak.uni-bielefeld.de/qahackathon/images/pal-logo.png" class="navbar-logo" />
     </div>
     <a class="navbar-brand col-sm" id="sidebar-brandlink" href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/index.php">Hackthon Question Answering (QueGG-Hackthon)</a>
     <!--input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"-->

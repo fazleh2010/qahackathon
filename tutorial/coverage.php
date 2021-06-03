@@ -47,6 +47,26 @@
         <!-- end RTD <extrahead> -->
     </head>
     
+
+    <title>Hackthon Question Answering (QueGG-Hackthon)</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>QueGG</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" integrity="sha512-aQX0wElRuvqZ1bVvsknO9jDXwvVI71vwYLuEDZ8QqMJxPozZPPCCmylpHx4ngmeIz7Bg6FfE4Ay+CfDVFqjy+A==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/quegg/style.css"/>
+
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+    <div class="navbar-logo col-sm-2">
+        <img src="https://scdemo.techfak.uni-bielefeld.de/qahackathon/images/pal-logo.png" class="navbar-logo" />
+    </div>
+    <a class="navbar-brand col-sm" id="sidebar-brandlink" href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/index.php">Hackthon Question Answering (QueGG-Hackthon)</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
     
     
     

@@ -34,7 +34,6 @@
 <a href="https://forms.gle/rTYj75FFUekWcWfM9">registration</a>&nbsp;&nbsp;|&nbsp;
 <a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php" target=top>Recipe</a></div></div>
 
-
 </head>
 
 <body onload="document.getElementById('statusdisplay').innerHTML = ''" id="top">

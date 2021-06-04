@@ -20,6 +20,7 @@
     <div class="navbar-logo col-sm-2">
         <img src="https://scdemo.techfak.uni-bielefeld.de/qahackathon/images/pal-logo.png" class="navbar-logo" />
     </div>
+
     <a class="navbar-brand col-sm" id="sidebar-brandlink" href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/index.php">Hackthon Question Answering (QueGG-Hackthon)</a>
     <!--input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"-->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -78,8 +79,24 @@
 	<p>Benz, V., Cimiano, P., Elahi, M.F., Ell, B. (2020), “Generating Grammars from lemon lexica for Questions Answering over Linked Data: a Preliminary Analysis.”. In: NLIWOD workshop at ISWC. vol. 2722, pp. 40–55. CEUR-WS.org (2020).<a href="http://ceur-ws.org/Vol-2722/nliwod2020-paper-2.pdf" data-type="URL" data-id="http://ceur-ws.org/Vol-2722/nliwod2020-paper-2.pdf">[pdf]</a> </p>
 	
 </div></div>
+
+
 </body> 
 
+ <div class="footer">
+
+          <hr>
+
+
+
+<div class="custom"  >
+	<p style="text-align: center;"><a href="http://www.folli.info" target="_blank"> <img style="border: 0px; cursor: default; padding-right: 20px;" src="https://scdemo.techfak.uni-bielefeld.de/qahackathon/images/pal-logo.png" alt="" width="73" height="80" border="0" /></a>     <img src="src="https://scdemo.techfak.uni-bielefeld.de/qahackathon/images/pal-logo.png"" alt="" width="195" height="91" />    <a href="https://www.uni-tuebingen.de" target="_blank"><img style="border: 0px; cursor: default;" src="images/banners/tubingen-uni-logo.gif" alt="" width="239" height="70" border="0" /></a></p>
+
+<p style="text-align: center;"><img src="images/eacsl.jpg" alt="" width="240" height="55" />      <img src="images/ASLWEB.jpg" alt="" width="134" height="91" />      <img src="https://scdemo.techfak.uni-bielefeld.de/qahackathon/images/pal-logo.png" alt="" width="168" height="108" />         <img src="images/sfbposter.png" alt="" width="84" height="102" />    </p>
+<p style="text-align: center;">Under the auspices of FoLLI (the Association for Logic, Language, and Information).<br />Supported by the University of Tübingen.</p></div>
+
+
+      </div>
 
 
 </html>

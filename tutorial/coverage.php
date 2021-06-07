@@ -140,9 +140,9 @@ domain(Germany) property(dbo:capital) range(Berlin)
 Recipe:
    (i)  go to the <a href="https://forms.gle/n9My8H3rja9VEwTd7">NounPPFrame</a>. 
    (ii) input written form of the lexical entry singular and plural.
-   (iii select property http://dbpedia.org/ontology/capital (i.e. dbo:capital). 
-   (iv) select domain http://dbpedia.org/ontology/Country (i.e dbo:Country). 
-   (v)  select range http://dbpedia.org/ontology/City (i.e dbo:City).
+   (iii input property dbo:capital (http://dbpedia.org/ontology/capital. 
+   (iv) input domain dbo:Country (http://dbpedia.org/ontology/Country). 
+   (v)  input range dbo:City (http://dbpedia.org/ontology/City).
    (vi) click submit  
 </pre>
 
@@ -175,9 +175,9 @@ Recipe:
    (ii)  input infinitive form of the verb (direct).
    (iii) input the 3rd Person form of the verb (directs).
    (iv)  input the past form of the verb (directed).
-   (v)   select property http://dbpedia.org/ontology/director (dbo:director). 
-   (vi)  select domain http://dbpedia.org/ontology/Film (dbo:Film).
-   (vii) select range http://dbpedia.org/ontology/Person (dbo:Person).
+   (v)   input property dbo: director (http://dbpedia.org/ontology/director). 
+   (vi)  input domain dbo:Film (http://dbpedia.org/ontology/Film).
+   (vii) input range dbo:Person (http://dbpedia.org/ontology/Person).
    (vii) click submit.
 </pre>
 </div>
@@ -204,13 +204,13 @@ dbo:River dbo:city dbo:City
 
 Recipe:
     (i)    go to the <a href="https://forms.gle/Xf8X3WKjNtGwXYPHA">InTransitivePPFrame</a>.
-    (ii)   select infinitve form of the verb (flow).
-    (iii)  select 3rd Person form of the verb (flows). 
-    (iv)   select past form of verb (flew)
-    (v)    select property http://dbpedia.org/ontology/city (dbo:city).
-    (vi)   select domain http://dbpedia.org/ontology/River (dbo:River).
-    (vii)  select range http://dbpedia.org/ontology/City (dbo:City).
-    (viii) select preposition "through".
+    (ii)   input infinitve form of the verb "flow".
+    (iii)  input 3rd Person form of the verb "flows". 
+    (iv)   input past form of verb "flew"
+    (v)    input property dbo:city (http://dbpedia.org/ontology/city).
+    (vi)   input domain dbo:River (http://dbpedia.org/ontology/River).
+    (vii)  input range dbo:City (http://dbpedia.org/ontology/City).
+    (viii) input preposition "through".
     (ix)   click submit.
 </pre>
 </div>

@@ -302,8 +302,10 @@ The base lemon contains syntactic information of articles, propositions, pronoun
 
 <div class="section" id="sentence-template">
 <h3><a class="toc-backref" href="#id103">2.3 Sentence template</a><a class="headerlink" href="#base-file" title="Permalink to this headline"></a></h3>
-After creating base file, create sentence templates for all syntactic frames (NounPPFrame, TransitiveFrame, IntransitiveFrame, etc.). Some examples of english sentence for NounPPframe is shown below. To create sentence templates for a new language fill the <a href="http://localhost/tutorial/form/BaseFileForm.php">form</a> and submit.</p>
+It is necessary to create sentence templates for all syntactic frames (NounPPFrame, TransitiveFrame, IntransitiveFrame, etc.). 
 <pre>
+Sentence templates for NounPPFrame
+
 Example1:
  verb(imperative_singular) pronoun(Possessive) determiner(the) noun(root) prepositionalAdjunct
  Give me the capital of Germany/Tell me the capital of Germany
@@ -322,10 +324,10 @@ Example2:
 <h3><a class="toc-backref" href="#id104">2.4 Recipe</a><a class="headerlink" href="#base-file" title="Permalink to this headline"></a></h3>
 <ul>
   <li>Create a branch of the <a href="https://github.com/fazleh2010/question-grammar-generator.git">QueGG project</a>. Alternatively, fork the project. </li>
-  <li>Write a base file by filling the <a href="https://">BaseForm</a> and submit</li>
-  <li>Write sentence templates by filling the <a href="https://">SentenceTemplateForm</a> and submit</li>
-  <li>Create lexical entries by filling discussed in <a href="http://localhost/tutorial/coverage.php#id3">Section 1</a> </li>
-  <li>build and run the program following the <a href="https://github.com/fazleh2010/question-grammar-generator.git">instructions</a></li>
+  <li>Write a base lemon.</li>
+  <li>Write sentence templates.</li>
+  <li>Write lexical entries as discussed in <a href="http://localhost/tutorial/coverage.php#id3">Section 1</a>.</li>
+  <li>Build and run the program following the <a href="https://github.com/fazleh2010/question-grammar-generator.git">instructions</a>.</li>
 </ul>
 <p></p><div>
 

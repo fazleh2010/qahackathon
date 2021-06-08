@@ -322,6 +322,7 @@ Example2:
 
 <div class="section" id="recipe-new-language">
 <h3><a class="toc-backref" href="#id104">2.4 Recipe</a><a class="headerlink" href="#base-file" title="Permalink to this headline"></a></h3>
+<pre>
 <ul>
   <li>Create a branch of the <a href="https://github.com/fazleh2010/question-grammar-generator.git">QueGG project</a>. Alternatively, fork the project. </li>
   <li>Write a base lemon.</li>
@@ -329,6 +330,7 @@ Example2:
   <li>Write lexical entries as discussed in <a href="http://localhost/tutorial/coverage.php#id3">Section 1</a>.</li>
   <li>Build and run the program following the <a href="https://github.com/fazleh2010/question-grammar-generator.git">instructions</a>.</li>
 </ul>
+</pre>
 <p></p><div>
 
 <div class="section" id="extend-system">

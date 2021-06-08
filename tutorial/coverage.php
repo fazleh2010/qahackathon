@@ -263,14 +263,7 @@ The semantics of the relational noun is captured with respect to the property <e
 
 <div class="section" id="new-language">
 <h3><a class="toc-backref" href="#id10">2. Extend QA system for a new language</a><a class="headerlink" href="#new-language" title="Permalink to this headline"></a></h3>
-QueGG system can generate grammar for two language English and German. To extend an NLP system to another language (which is not covered by QueGG) is a very useful exercise. To extend the system do the followings:
-
-<!--ul>
-  <li>create a branch of the <a href="https://github.com/fazleh2010/question-grammar-generator.git">QueGG project</a>. Alternatively, fork the project. </li>
-  <li>Write base file that contains article, proposition, pronoun, etc. </li>
-  <li>Write sentence templates</li>
-  <li>build and run the project</l>
-</ul-->
+The QA system currently works for English and German. To extend it for another language we need to create a base lemon and lexical entries.
 
 <div class="section" id="base-file">
 <h3><a class="toc-backref" href="#id102">2.1 Base lemon</a><a class="headerlink" href="#base-file" title="Permalink to this headline"></a></h3>

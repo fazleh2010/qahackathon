@@ -63,9 +63,9 @@
 	
         <p>The hackathon aims to improve the QA system on the combination of semantic web and language technologies. There are several possibilities to extend the system such as <p>
         <ul>
-	    <li><a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php">Extend grammar coverage</a></li>
-	    <li><a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php">Extend the system for a new dataset</a></li>
-	    <li><a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php">Extend QA system for a language </a></li>
+	    <li><a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php#coverage">Extend grammar coverage</a></li>
+	    <li><a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php#new-language">Extend QA system for another language </a></li>
+            <li><a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php">Extend the system for another dataset</a></li>
 	    <li><a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php">improve user interface</a>.</li>
 	    <li>We also will be very glad to know the other ideas and directions from the participants</li>
 	</ul>

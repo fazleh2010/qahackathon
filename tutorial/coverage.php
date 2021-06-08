@@ -267,7 +267,9 @@ The QA system currently works for English and German. To extend it for another l
 
 <div class="section" id="base-file">
 <h3><a class="toc-backref" href="#id102">2.1 Base lemon</a><a class="headerlink" href="#base-file" title="Permalink to this headline"></a></h3>
-<p>The base file contains syntactic information and  written of articles, propositions, pronouns etc.  QueGG currently have base file for <a href="https://github.com/fazleh2010/question-grammar-generator/blob/master/src/main/resources/en/base/base.ttl">english</a> and german. An example of base file is shown below. <><pre>
+<p>
+The base lemon contains syntactic information of articles, propositions, pronouns. etc. The QA system currently has base lemon for English <a href="https://github.com/fazleh2010/question-grammar-generator/blob/master/src/main/resources/en/base/base.ttl">english</a> and German. An example of the base lemon is shown below:
+<pre>
 ## auxiliary verb ##
 
 :component_be a        lemon:LexicalEntry ;

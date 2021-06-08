@@ -59,16 +59,16 @@
 	<p> The hackathon will be held virtually from <strong>28 June to 2nd July, 2021</strong></p>	
 	<p><strong>Hackathon description</strong></p>
         <p>Many question answering systems over RDF that are induced from pairs of questions and answers using some machine learning technique suffer from a lack of controllability, making the governance and incremental improvement of the system challenging, not to mention the initial effort of collecting and providing training data. As an alternative, we present a model-based approach to question answering that uses an ontology lexicon in lemon format and automatically generates a lexicalized grammar that can be used to interpret and parse questions into SPARQL queries. The approach gives maximum control over the QA system to the developer of the system as every lexicon entry added to the lexicon increases the coverage of the grammar, and thus of the QA system, in a predictable way. </p>	
-        <p>The hackathon aims to improve the QA system on the combination of semantic web and language technologies. There are several possibilities to extend the system such as <p>
+        <p>The hackathon aims to improve the QA system on the combination of semantic web and language technologies. There are several possibilities to extend the system such as: <p>
         <ul>
-	    <li><a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php#coverage">Extend grammar coverage</a></li>
-	    <li><a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php#new-language">Extend QA system for another language </a></li>
-            <li><a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php">Extend the system for another dataset</a></li>
-	    <li><a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php">improve user interface</a>.</li>
-	    <li>We also will be very glad to know the other ideas and directions from the participants</li>
+	    <li><a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php#coverage">Extending the coverage of the grammar</a></li>
+	    <li><a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php#new-language">Adding support for a further language</a></li>
+            <li><a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php">Porting the system to a new dataset</a></li>
+	    <li><a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php">Improve the user experience/interface</a></li>
 	</ul>
 
-        <p>The hackathon is supported by the project <a href="https://pret-a-llod.github.io/">Pret-A-LLOD</a> as well as by <a href="https://nexuslinguarum.eu/">Nexus Linguarum Cost Action</a>. We welcome cross-disciplinary collaborations of computer scientists, computational linguistics and related fields to participate and contribute any level of their interest. Please <a href="https://forms.gle/rTYj75FFUekWcWfM9">register</a> for the Hackathon until <strong>18 June 2021</strong></p>
+        <p> These are to be understood as suggestions from our side. We are also open to other directions or tasks participants are interested to work on.</p>
+        <p>The hackathon is supported by the project <a href="https://pret-a-llod.github.io/">Pret-A-LLOD</a> as well as by <a href="https://nexuslinguarum.eu/">Nexus Linguarum Cost Action</a>. We welcome cross-disciplinary collaborations of computer scientists, computational linguistics and related fields to participate and contribute any level of their interest. Please <a href="https://forms.gle/rTYj75FFUekWcWfM9">register</a> the hackathon for participation until <strong>18 June 2021</strong></p>
         <p><strong>important links</strong></p>
 
         <ul>

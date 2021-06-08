@@ -85,10 +85,10 @@
 	<p><strong>References:</strong></p>
 	<p><strong>Main reading:</strong> Benz, V., Cimiano, P., Elahi, M.F., Ell, B. (2020), <a href="http://ceur-ws.org/Vol-2722/nliwod2020-paper-2.pdf"> Generating Grammars from lemon lexica for Questions Answering over Linked Data: a Preliminary Analysis</a>. In: NLIWOD workshop at ISWC. vol. 2722, pp. 40–55. CEUR-WS.org (2020).</p>
 
-       <p>Philipp Cimiano, Paul Buitelaar, John McCrae, Michael Sintek <a href="https://www.dropbox.com/s/7yio7d9bj0wh32d/LexInfopdf?dl=0">LexInfo: A Declarative Model for the Lexicon-Ontology Interface</a> </p>
+       <p>Philipp Cimiano, Paul Buitelaar, John McCrae, Michael Sintek. <a href="https://www.dropbox.com/s/7yio7d9bj0wh32d/LexInfopdf?dl=0">LexInfo: A Declarative Model for the Lexicon-Ontology Interface</a> </p>
 
-       <p>Ricardo Usbeck, Axel-Cyrille Ngonga Ngomo, Bastian Haarmann,Anastasia Krithara, Michael R¨oder, and Giulio Napolitano2 <a href="https://www.dropbox.com/s/4wxo2iei5adadck/qald-7.pdf?dl=0">7th Open Challenge on Question Answering over Linked Data (QALD-7) </a>. </p>
-        <p>John P. McCrae, Francesca Quattri, Christina Unger, Philipp Cimiano <a href="https://www.aclweb.org/anthology/W14-4724.pdf">Modelling the Semantics of Adjectives in the Ontology-Lexicon Interface</a>. Proceedings of the 4th Workshop on Cognitive Aspects of the Lexicon CogALex(2014). </p>
+       <p>Ricardo Usbeck, Axel-Cyrille Ngonga Ngomo, Bastian Haarmann,Anastasia Krithara, Michael R¨oder, and Giulio Napolitano. <a href="https://www.dropbox.com/s/4wxo2iei5adadck/qald-7.pdf?dl=0">7th Open Challenge on Question Answering over Linked Data (QALD-7) </a>. </p>
+        <p>John P. McCrae, Francesca Quattri, Christina Unger, Philipp Cimiano. <a href="https://www.aclweb.org/anthology/W14-4724.pdf">Modelling the Semantics of Adjectives in the Ontology-Lexicon Interface</a>. Proceedings of the 4th Workshop on Cognitive Aspects of the Lexicon CogALex(2014). </p>
 
 
         <p><strong>Contact Information</strong></p>

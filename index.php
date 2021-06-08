@@ -56,11 +56,9 @@
         <div align="justify">
 	<!--h3>Hackthon on multilingual Question Answering over linked data (QueGG)</h3-->
 
-	<p> The hackathon will be held virtually from <strong>28 June to 2nd July, 2021</strong></p>
-	
+	<p> The hackathon will be held virtually from <strong>28 June to 2nd July, 2021</strong></p>	
 	<p><strong>Hackathon description</strong></p>
-        <p>Many question answering systems over RDF that are induced from pairs of questions and answers using some machine learning technique suffer from a lack of controllability, making the governance and incremental improvement of the system challenging, not to mention the initial effort of collecting and providing training data. As an alternative, we present a model-based approach to question answering that uses an ontology lexicon in lemon format and automatically generates a lexicalized grammar that can be used to interpret and parse questions into SPARQL queries. The approach gives maximum control over the QA system to the developer of the system as every lexicon entry added to the lexicon increases the coverage of the grammar, and thus of the QA system, in a predictable way. </p>
-	
+        <p>Many question answering systems over RDF that are induced from pairs of questions and answers using some machine learning technique suffer from a lack of controllability, making the governance and incremental improvement of the system challenging, not to mention the initial effort of collecting and providing training data. As an alternative, we present a model-based approach to question answering that uses an ontology lexicon in lemon format and automatically generates a lexicalized grammar that can be used to interpret and parse questions into SPARQL queries. The approach gives maximum control over the QA system to the developer of the system as every lexicon entry added to the lexicon increases the coverage of the grammar, and thus of the QA system, in a predictable way. </p>	
         <p>The hackathon aims to improve the QA system on the combination of semantic web and language technologies. There are several possibilities to extend the system such as <p>
         <ul>
 	    <li><a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php#coverage">Extend grammar coverage</a></li>

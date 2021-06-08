@@ -327,7 +327,10 @@ Example2:
    - Create a branch (german) of the <a href="https://github.com/fazleh2010/question-grammar-generator.git">QueGG project</a>. Alternatively, fork the project.
    - Create a folder src/main/resources/de/base/
    - Create a base lemon at src/main/resources/de/base/
-   - Write sentence templates for the language
+   - Add question words (such as Interrogative determiner) at src/main/java/grammar/generator/helper/datasets/questionword/QuestionWordFactoryDE.java
+   - Add sentences templates at src/main/java/grammar/generator/helper/datasets/sentencetemplates/SentenceTemplateFactoryDE.java  
+   - Add masculine,feminine,neutral objects at src/main/java/grammar/structure/component/DomainOrRangeMorphologicalProperties.java
+   - Add if/else condition for the language at src/main/java/lexicon/LexicalEntryUtil.java
    - Write lexical entries for german using the Form discussed in <a href="http://localhost/tutorial/coverage.php#id3">Section 1</a>.
    - Build and run the program following the <a href="https://github.com/fazleh2010/question-grammar-generator.git">instructions</a>
 </pre>

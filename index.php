@@ -73,8 +73,8 @@
 	 <p><strong>prerequisites</strong></p>
    
          <ul>
-            <li>basic understanding of semantic technologies (RDF, linked data, SPARQL, etc).<li>
-	    <li>knowledge of Java<li>
+            <li>basic understanding of semantic technologies (RDF, linked data, SPARQL, etc)</li>
+	    <li>knowledge of Java</li>
          </ul>
 
 

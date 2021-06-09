@@ -68,7 +68,16 @@
 
         <p> These are to be understood as suggestions from our side. We are also open to other directions or tasks participants are interested to work on.</p>
         <p>The hackathon is supported by the project <a href="https://pret-a-llod.github.io/">Pret-A-LLOD</a> as well as by <a href="https://nexuslinguarum.eu/">Nexus Linguarum Cost Action</a>. We welcome cross-disciplinary collaborations of computer scientists, computational linguistics and related fields to participate and contribute any level of their interest. Please <a href="https://forms.gle/rTYj75FFUekWcWfM9">register</a> the hackathon for participation until <strong>28 June 2021</strong></p>
-        <p><strong>important links</strong></p>
+	
+	 <p><strong>prerequisites</strong></p>
+   
+         <ul>
+            <li>basic understanding of semantic technologies (RDF, linked data, SPARQL, etc).<li>
+	    <li>knowledge of Java<li>
+         </ul>
+
+
+         <p><strong>important links</strong></p>
 
         <ul>
 	    <li>online demo <a href="https://scdemo.techfak.uni-bielefeld.de/quegg/" data-type="URL" data-id="https://scdemo.techfak.uni-bielefeld.de/quegg/">QA system user interface</a></li>

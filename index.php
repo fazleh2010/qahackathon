@@ -22,8 +22,7 @@
 	<img src="https://scdemo.techfak.uni-bielefeld.de/qahackathon/images/pal-logo.png" align="left" class="navbar-logo" width="200" height="600"/>
         </a>
     </div>
-    <a class="navbar-brand col-sm" align="center" id="sidebar-brandlink" href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/index.php">Hackathon on Question Answering based on automatically generated grammars (28 June to 2nd July 2021)</a>          
-    
+    <a class="navbar-brand col-sm" align="center" id="sidebar-brandlink" href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/index.php">Hackathon on Question Answering based on automatically generated grammars (5-9 July 2021)</a>              
      <div class="navbar-logo col-sm-2" >
          <a href="https://nexuslinguarum.eu/">
          <img src="https://scdemo.techfak.uni-bielefeld.de/qahackathon/images/nexus-logo.png" align="right" class="navbar-logo" />
@@ -56,7 +55,7 @@
         <div align="justify">
 	<!--h3>Hackthon on multilingual Question Answering over linked data (QueGG)</h3-->
 
-	<p> The hackathon will be held virtually from <strong>28 June to 2nd July, 2021</strong></p>	
+	<p> The hackathon will be held virtually from <strong>5-9 July, 2021</strong></p>	
 	<p><strong>Hackathon description</strong></p>
         <p>Many question answering systems over RDF that are induced from pairs of questions and answers using some machine learning technique suffer from a lack of controllability, making the governance and incremental improvement of the system challenging, not to mention the initial effort of collecting and providing training data. As an alternative, we present a model-based approach to question answering that uses an ontology lexicon in lemon format and automatically generates a lexicalized grammar that can be used to interpret and parse questions into SPARQL queries. The approach gives maximum control over the QA system to the developer of the system as every lexicon entry added to the lexicon increases the coverage of the grammar, and thus of the QA system, in a predictable way. </p>	
         <p>The hackathon aims to improve the QA system on the combination of semantic web and language technologies. There are several possibilities to extend the system such as: <p>
@@ -68,7 +67,7 @@
 	</ul>
 
         <p> These are to be understood as suggestions from our side. We are also open to other directions or tasks participants are interested to work on.</p>
-        <p>The hackathon is supported by the project <a href="https://pret-a-llod.github.io/">Pret-A-LLOD</a> as well as by <a href="https://nexuslinguarum.eu/">Nexus Linguarum Cost Action</a>. We welcome cross-disciplinary collaborations of computer scientists, computational linguistics and related fields to participate and contribute any level of their interest. Please <a href="https://forms.gle/rTYj75FFUekWcWfM9">register</a> the hackathon for participation until <strong>18 June 2021</strong></p>
+        <p>The hackathon is supported by the project <a href="https://pret-a-llod.github.io/">Pret-A-LLOD</a> as well as by <a href="https://nexuslinguarum.eu/">Nexus Linguarum Cost Action</a>. We welcome cross-disciplinary collaborations of computer scientists, computational linguistics and related fields to participate and contribute any level of their interest. Please <a href="https://forms.gle/rTYj75FFUekWcWfM9">register</a> the hackathon for participation until <strong>28 June 2021</strong></p>
         <p><strong>important links</strong></p>
 
         <ul>

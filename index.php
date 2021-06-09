@@ -49,7 +49,7 @@
 <div id="kopfbereich_folgeseite">
 <a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/index.php">Home</a>&nbsp;&nbsp;|&nbsp;
 <a href="https://forms.gle/rTYj75FFUekWcWfM9">Registration</a>&nbsp;&nbsp;|&nbsp;
-<a href="https://docs.google.com/document/d/14FRDHF-9kxpyOvBQKJX1KTubmxvLdfLli1UQ7L8wGYo/edit?usp=sharing">Schedule</a>
+<a href="https://docs.google.com/document/d/14FRDHF-9kxpyOvBQKJX1KTubmxvLdfLli1UQ7L8wGYo/edit?usp=sharing">Schedule</a>&nbsp;&nbsp;|&nbsp;
 <a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php" target="top">Recipe</a></div></div>
 	
 

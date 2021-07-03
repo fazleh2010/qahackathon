@@ -48,6 +48,12 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
     
 <body>
 
+<a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/index.php">Home</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://forms.gle/rTYj75FFUekWcWfM9">Registration</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://docs.google.com/document/d/14FRDHF-9kxpyOvBQKJX1KTubmxvLdfLli1UQ7L8wGYo/edit?usp=sharing">Schedule</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php" target="top">Recipe</a></div></div>
+
+
 <div class="documentwrapper">
 <div class="bodywrapper">
 <!--div class="body" role="main"-->
@@ -79,9 +85,6 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 <li><a class="reference internal" href="#base-file" id="id102">2.1 Base lemon</a></li>
 <li><a class="reference internal" href="#sentence-template" id="id103">2.2 Sentence template</a></li>
 <li><a class="reference internal" href="#recipe-new-language" id="id104">2.3 Recipe</a></li>
-
-<!--li><a class="reference internal" href="#build-run" id="id104">3.4 Build and run the project</a></li>
-<li><a class="reference internal" href="#qa-system" id="id105">3.5 QA system</a></li-->
 </ul>
 </li>
 
@@ -114,90 +117,6 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 </ul>
 </div>
 
-<div class="section" id="docker">
-<h3><a class="toc-backref" href="#run-QA">2. Extend QA system for a new language</a><a class="headerlink" href="#new-language" title="Permalink to this headline"></a></h3>
-The QA system currently works for English and German. To extend it for another language we need to create a base lemon and lexical entries.
-
-<div class="section" id="base-file">
-<h3><a class="toc-backref" href="#id102">2.1 Base lemon</a><a class="headerlink" href="#base-file" title="Permalink to this headline"></a></h3>
-<p>
-The base lemon contains syntactic information of articles, propositions, pronouns. etc. The QA system currently has base lemon for <a href="https://github.com/fazleh2010/question-grammar-generator/blob/master/src/main/resources/en/base/base.ttl">English</a> and German. An example of the base lemon is shown below:
-<pre>
-## auxiliary verb ##
-
-:component_be a        lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "be"@en ;
-  lexinfo:verbFormMood                    lexinfo:infinitive ] ;
-  lemon:otherForm      [ lemon:writtenRep "is"@en ;
-  lexinfo:tense                           lexinfo:present ;
-  lexinfo:person                          lexinfo:thirdPerson ;
-  lexinfo:number                          lexinfo:singular ] ;
-  lemon:otherForm      [ lemon:writtenRep "was"@en ;
-  lexinfo:tense                           lexinfo:past ;
-  lexinfo:person                          lexinfo:thirdPerson ;
-  lexinfo:number                          lexinfo:singular ] ;
- 
-## Determiners ##
-
-:component_the a       lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "the"@en ] ;
-  lexinfo:partOfSpeech lexinfo:article .
-
-:component_a a         lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "a"@en ] ;
-  lexinfo:partOfSpeech lexinfo:determiner .
-
-:component_an a        lemon:LexicalEntry ;
-  lemon:canonicalForm  [ lemon:writtenRep "an"@en ] ;
-  lexinfo:partOfSpeech lexinfo:determiner .
-</pre>
-<div>
-
-<div class="section" id="sentence-template">
-<h3><a class="toc-backref" href="#id103">2.3 Sentence template</a><a class="headerlink" href="#base-file" title="Permalink to this headline"></a></h3>
-It is necessary to create sentence templates for all syntactic frames (NounPPFrame, TransitiveFrame, IntransitiveFrame, etc.). 
-<pre>
-Sentence templates for NounPPFrame
-
-Example1:
- verb(imperative_singular) pronoun(Possessive) determiner(the) noun(root) prepositionalAdjunct
- Give me the capital of Germany/Tell me the capital of Germany
-
-Example2: 
- verb(imperative_plural) determiner(the) noun(root) prepositionalAdjunct
- List the rivers of Germany
-
-</pre>
-
-
-<p></p><div>
-
-
-<div class="section" id="recipe-new-language">
-<h3><a class="toc-backref" href="#id104">2.4 Recipe</a><a class="headerlink" href="#base-file" title="Permalink to this headline"></a></h3>
-<pre>
-   For example for langauge German (de). We will cover NounPPFrame syntatic frame.
-   - Create a branch (german) of the <a href="https://github.com/fazleh2010/question-grammar-generator.git">QueGG project</a>. Alternatively, fork the project.
-   - Create a folder src/main/resources/de/base/ and write a base lemon (base.ttl)
-   - Coding:
-     - Create a java class QuestionWordFactoryDE.java at src/main/java/grammar/generator/helper/datasets/questionword/ add question words (such as Interrogative determiner).
-       -Interrogative determiner (i.e. What for english), 
-       -Type (i.e. singular/plural),
-       -Gender (i.e. commonGender if no gender exist, otherwise masculine,feminine,neutral).
-     - Create a java class SentenceTemplateFactoryDE.java at src/main/java/grammar/generator/helper/datasets/sentencetemplates/ and write sentence templates.  
-       - For example for NounPPFrame: 
-             -full sentence: "interrogativePronoun verb(reference:component_be) NP(prepositionalAdjunct)?" 
-             -NP pharse: 
-              -"determiner(reference:component_the_nominative) noun(root:nominativeCase) preposition prepositionalAdjunct" when gender exists 
-     -Modify domain and range: 
-	    - If the langauge has gender phenomena then create a class DomainOrRangeMorphologicalProperties.java at src/main/java/grammar/structure/component/ and category them as per gender.
-            - Otherwise  use existing DomainOrRangeType.java
-     - modify codes LexicalEntryUtil.java for language "de". Write the function getPluralFormDE(); 
-     - Implement the interface interpretSentenceToken at src/main/java/grammar/generator/helper/SentenceBuilderCopulativePP.java 
-   - Write lexical entries for german using the Form discussed in <a href="http://localhost/tutorial/coverage.php#id3">Section 1</a>.
-   - Build and run the program following the <a href="https://github.com/fazleh2010/question-grammar-generator.git">instructions</a>
-</pre>
-<p></p><div>
 
 
 <div class="section" id="coverage">
@@ -212,24 +131,23 @@ The semantics of the relational noun is captured with respect to the property <e
 <div class="highlight">
 <pre>
 Sentence: 
-Berlin is the capital of Germany.
 
-Triple:  
-domain(Germany) property(dbo:capital) range(Berlin)
+(Berlin) is the capital of (Germany)  
+(Germany)   (capital of)   (Berlin) 
+
+Triple
+
+http://dbpedia.org/ontology/Country http://dbpedia.org/ontology/capital http://dbpedia.org/ontology/City)
 
 Recipe:
-   (i)  go to the <a href="https://forms.gle/n9My8H3rja9VEwTd7">NounPPFrame</a>. 
+   (i)  go to the Google XSL sheet <a href="https://docs.google.com/spreadsheets/d/1BdI-OZ38eCwuGfWT9GMKNJFGyWvxwTle16cDFTPgDuQ/edit?usp=sharing">NounPPFrame</a>. 
    (ii) input written form of the lexical entry singular and plural.
    (iii input property dbo:capital (http://dbpedia.org/ontology/capital. 
    (iv) input domain dbo:Country (http://dbpedia.org/ontology/Country). 
    (v)  input range dbo:City (http://dbpedia.org/ontology/City).
-   (vi) click submit  
+   (vi) input preposition "of".
 </pre>
 
-<p> An example of creating lexical entry "capital of"</p>
-
-<img src="NounPPFrame.png" height="700">
-<br /> 
 
 </div>
 
@@ -237,7 +155,7 @@ Recipe:
 <h3><a class="toc-backref" href="#id5">1.2 Create lexical entry for TransitiveFrame</a><a class="headerlink" href="#transitive" title="Permalink to this headline"></a></h3>
 
 <p>
-The lexical entry <em> (to) direct </em> states that the canonical form has the written representation <em>direct</em>. The thrid person singular written form is <em>directs</em>, and the (simple) past form is <em>directed</em>. The semantics of the verb <em>(to) direct</em> is expressed by the property <em>http://dbpedia.org/ontology/director (dbo:director)</em>. Thus, the meaning of
+The lexical entry <em> (to) direct </em> states that the canonical form has the written representation <em>direct</em>. The third person singular written form is <em>directs</em>, and the (simple) past form is <em>directed</em>. The semantics of the verb <em>(to) direct</em> is expressed by the property <em>http://dbpedia.org/ontology/director (dbo:director)</em>. Thus, the meaning of
 
 <div class="highlight-default notranslate">
 <div class="highlight">
@@ -245,27 +163,23 @@ The lexical entry <em> (to) direct </em> states that the canonical form has the 
 Sentence:
 
 (Quentin Tarantino) (directed) (Pulp Fictio)
+(Pulp Fictio)       (directed) (Quentin Tarantino)
 
 Triple:
 
-dbo:Film dbo:director dbo:Person
+http://dbpedia.org/ontology/Film http://dbpedia.org/ontology/director http://dbpedia.org/ontology/Person
 
 Recipe:
-   (i)   go to the <a href="https://forms.gle/ETsA2okfD3M569QSA">TransitiveFrame</a>.
+   (i)   go to the Google XSL sheet <a href="https://docs.google.com/spreadsheets/d/1yiv-zCcXLx87mxMztKXmJVJSkbFsNwbUZEpvmWZ3C58/edit?usp=sharing">TransitiveFrame</a>.
    (ii)  input infinitive form of the verb (direct).
    (iii) input the 3rd Person form of the verb (directs).
    (iv)  input the past form of the verb (directed).
    (v)   input property dbo: director (http://dbpedia.org/ontology/director). 
    (vi)  input domain dbo:Film (http://dbpedia.org/ontology/Film).
    (vii) input range dbo:Person (http://dbpedia.org/ontology/Person).
-   (vii) click submit.
 </pre>
 </div>
 
-<p> An example of creating lexical entry "direct"</p>
-
-<img src="TransitiveFrame.png" alt="Trulli" height="700">
-<br />
 
 <div class="section" id="intransitive">
 <h3><a class="toc-backref" href="#id6">1.3 Create lexical entry for InTransitivePPFrame</a><a class="headerlink" href="#intransitive" title="Permalink to this headline"></a></h3>
@@ -283,7 +197,7 @@ Triple:
 dbo:River dbo:city dbo:City
 
 Recipe:
-    (i)    go to the <a href="https://forms.gle/Xf8X3WKjNtGwXYPHA">InTransitivePPFrame</a>.
+    (i)    go to the <a href="https://docs.google.com/spreadsheets/d/1-SD6GmTCRwtbTIq8ImfcLd_02Gu-wQIqeNyknQ0vbj8/edit?usp=sharing">InTransitivePPFrame</a>.
     (ii)   input infinitve form of the verb "flow".
     (iii)  input 3rd Person form of the verb "flows". 
     (iv)   input past form of verb "flew"
@@ -291,13 +205,12 @@ Recipe:
     (vi)   input domain dbo:River (http://dbpedia.org/ontology/River).
     (vii)  input range dbo:City (http://dbpedia.org/ontology/City).
     (viii) input preposition "through".
-    (ix)   click submit.
 </pre>
 </div>
 
 
-<div class="section" id="attributive">
-<h3><a class="toc-backref" href="#id7">1.4 Create lexical entry for Attributive Adjective</a><a class="headerlink" href="#attributive" title="Permalink to this headline"></a></h3>
+<!--div class="section" id="attributive">
+<h3><a class="toc-backref" href="#id7">1.4 Create lexical entry for Attributive Adjective</a><a class="headerlink" href="#attributive" title="Permalink to this headline"></a></h3-->
 <!--p>NounPPFrame as syntactic behaviour that corresponds to a copulative construction with two arguments X and Y. , where <em>copulativeArg</em> corresponds to the copula subject <em>X</em> and the <em>prepositionalAdjunct</em> corresponds to the prepositional object <em>Y</em>.
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">X is the capital of Y</span></pre></div>
 The semantics of the relational noun is captured with respect to the property <em>http://dbpedia.org/ontology/capital</em>, where the subject of the property is realized by the <em>prepositionalAdjunct</em> and the object of the property is realized by the copulativeArg. This essentially captures the fact that the meaning of <em>Berlin is the capital of Germany</em> is expressed by the triple:
@@ -312,14 +225,11 @@ The semantics of the relational noun is captured with respect to the property <e
   <li>click submit</li>
 </ul>
 
-<p> An example of creating lexical entry "capital of"</p>
+<br/-->
 
-<img src="NounPPFrame.png" alt="Trulli" width="500" height="333"-->
-<br />
-
-<div class="section" id="gradbale">
+<!--div class="section" id="gradbale">
 <h3><a class="toc-backref" href="#id8">1.5 Create lexical entry for Gradable Adjective</a><a class="headerlink" href="#gradable" title="Permalink to this headline"></a></h3>
-<!--h6>NounPPFrame Construction</h6>
+<h6>NounPPFrame Construction</h6>
 <p>NounPPFrame as syntactic behaviour that corresponds to a copulative construction with two arguments X and Y. , where <em>copulativeArg</em> corresponds to the copula subject <em>X</em> and the <em>prepositionalAdjunct</em> corresponds to the prepositional object <em>Y</em>.
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">X is the capital of Y</span></pre></div>
 The semantics of the relational noun is captured with respect to the property <em>http://dbpedia.org/ontology/capital</em>, where the subject of the property is realized by the <em>prepositionalAdjunct</em> and the object of the property is realized by the copulativeArg. This essentially captures the fact that the meaning of <em>Berlin is the capital of Germany</em> is expressed by the triple:
@@ -334,12 +244,8 @@ The semantics of the relational noun is captured with respect to the property <e
   <li>click submit</li>
 </ul>
 
-<p> An example of creating lexical entry "capital of"</p>
 
-<img src="NounPPFrame.png" alt="Trulli" width="500" height="333"-->
-
-
-</div>
+</div-->
 
 <div class="section" id="new-language">
 <h3><a class="toc-backref" href="#id10">2. Extend QA system for a new language</a><a class="headerlink" href="#new-language" title="Permalink to this headline"></a></h3>
@@ -442,8 +348,8 @@ Wikidata sparql endpoint: https://query.wikidata.org/
 <h3><a class="toc-backref" href="#id14">3.2 Recipe</a><a class="headerlink" href="#extend-recipe" title="Permalink to this headline"></a></h3>
 <ul>
   <li>Register the sparql endpoint and list of properties of the dataset by filling the <a href="https:">form</a> and submit. </li>
-  <li>build and run the program following the <a href="https:">instructions</a></li>
-  <li>Create lexical entries by filling discussed in <a href="http://localhost/tutorial/coverage.php#id3">Section 1</a> </li>
+  <!--li>build and run the program following the <a href="https:">instructions</a></li-->
+  <!--li>Create lexical entries by filling discussed in <a href="http://localhost/tutorial/coverage.php#id3">Section 1</a> </li-->
 </ul>
 <p></p><div>
 

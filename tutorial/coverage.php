@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>3. Package Requirements &#8212; GATE  documentation</title>
+    <title>Hackathon on Question Answering based on automatically generated grammars</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="https://assets.readthedocs.org/static/css/badge_only.css" />
@@ -43,15 +43,20 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 
 <script type="text/javascript" src="https://assets.readthedocs.org/static/javascript/readthedocs-analytics.js" async="async"></script>
 
+
+<!-- menu-->
+
+
+
 <!-- end RTD <extrahead> -->
 </head>    
     
 <body>
 
-<a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/index.php">Home</a>&nbsp;&nbsp;|&nbsp;
-<a href="https://forms.gle/rTYj75FFUekWcWfM9">Registration</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/index.php"></a>&nbsp;&nbsp;|&nbsp;
+<a href="https://forms.gle/rTYj75FFUekWcWfM9">Home</a>&nbsp;&nbsp;|&nbsp;
 <a href="https://docs.google.com/document/d/14FRDHF-9kxpyOvBQKJX1KTubmxvLdfLli1UQ7L8wGYo/edit?usp=sharing">Schedule</a>&nbsp;&nbsp;|&nbsp;
-<a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php" target="top">Recipe</a></div></div>
+
 
 
 <div class="documentwrapper">

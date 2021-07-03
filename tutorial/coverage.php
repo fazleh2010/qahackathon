@@ -56,12 +56,21 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 <div class="contents local topic" id="table-of-contents">
 <h2>Table of Contents</h2>
 <ul class="simple">
+
+<li><a class="reference internal" href="#docker" id="id400">Getting Started</a><ul>
+<li><a class="reference internal" href="#run-QA" id="id401">Run the QA system on your machine</a></li>
+<li><a class="reference internal" href="#new-questions" id="id402">Add new questions</a></li>
+
+</ul>
+</li>
+
+
 <li><a class="reference internal" href="#coverage" id="id3">1. Extend grammar coverage</a><ul>
 <li><a class="reference internal" href="#noun" id="id4">1.1 Create lexical entry for NounPPFrame</a></li>
 <li><a class="reference internal" href="#transitive" id="id5">1.2 Create lexical entry for TransitiveFrame</a></li>
 <li><a class="reference internal" href="#intransitive" id="id6">1.3 Create lexical entry for InTransitivePPFrame</a></li>
-<li><a class="reference internal" href="#attributive" id="id7">1.4 Create lexical entry for Attributive Adjective</a></li>
-<li><a class="reference internal" href="#gradable" id="id8">1.5 Create lexical entry for Gradable Adjective</a></li>
+<!--li><a class="reference internal" href="#attributive" id="id7">1.4 Create lexical entry for Attributive Adjective</a></li>
+<li><a class="reference internal" href="#gradable" id="id8">1.5 Create lexical entry for Gradable Adjective</a></li-->
 </ul>
 </li>
 
@@ -80,20 +89,6 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 <li><a class="reference internal" href="#extend-dataset" id="id13">3.1 Dataset</a></li>
 <li><a class="reference internal" href="#extend-recipe" id="id14">3.2 Recipe</a></li>
 
-<!--li><a class="reference internal" href="#generality-tree-creation" id="id8">Generality - Tree creation</a></li>
-<li><a class="reference internal" href="#units" id="id9">Units</a></li>
-<li><a class="reference internal" href="#axes" id="id10">Axes</a></li>
-<li><a class="reference internal" href="#building-a-volume" id="id11">Building a volume</a><ul>
-<li><a class="reference internal" href="#examples" id="id12">Examples</a><ul>
-<li><a class="reference internal" href="#how-to-build-a-nai-crystal" id="id13">How to build a NaI crystal</a></li>
-<li><a class="reference internal" href="#how-to-build-a-trpd-volume" id="id14">How to build a “trpd” volume</a></li>
-<li><a class="reference internal" href="#how-to-build-a-wedge-volume" id="id15">How to build a “wedge” volume</a></li>
-<li><a class="reference internal" href="#how-to-build-a-tessellated-volume" id="id16">How to build a “tessellated” volume</a></li>
-<li><a class="reference internal" href="#how-to-build-a-tetmeshbox-volume" id="id17">How to build a “TetMeshBox” volume</a></li>
-</ul>
-</li>
-</ul>
-</li-->
 </ul>
 </li>
 
@@ -118,6 +113,91 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 </li>
 </ul>
 </div>
+
+<div class="section" id="docker">
+<h3><a class="toc-backref" href="#run-QA">2. Extend QA system for a new language</a><a class="headerlink" href="#new-language" title="Permalink to this headline"></a></h3>
+The QA system currently works for English and German. To extend it for another language we need to create a base lemon and lexical entries.
+
+<div class="section" id="base-file">
+<h3><a class="toc-backref" href="#id102">2.1 Base lemon</a><a class="headerlink" href="#base-file" title="Permalink to this headline"></a></h3>
+<p>
+The base lemon contains syntactic information of articles, propositions, pronouns. etc. The QA system currently has base lemon for <a href="https://github.com/fazleh2010/question-grammar-generator/blob/master/src/main/resources/en/base/base.ttl">English</a> and German. An example of the base lemon is shown below:
+<pre>
+## auxiliary verb ##
+
+:component_be a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "be"@en ;
+  lexinfo:verbFormMood                    lexinfo:infinitive ] ;
+  lemon:otherForm      [ lemon:writtenRep "is"@en ;
+  lexinfo:tense                           lexinfo:present ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+  lemon:otherForm      [ lemon:writtenRep "was"@en ;
+  lexinfo:tense                           lexinfo:past ;
+  lexinfo:person                          lexinfo:thirdPerson ;
+  lexinfo:number                          lexinfo:singular ] ;
+ 
+## Determiners ##
+
+:component_the a       lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "the"@en ] ;
+  lexinfo:partOfSpeech lexinfo:article .
+
+:component_a a         lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "a"@en ] ;
+  lexinfo:partOfSpeech lexinfo:determiner .
+
+:component_an a        lemon:LexicalEntry ;
+  lemon:canonicalForm  [ lemon:writtenRep "an"@en ] ;
+  lexinfo:partOfSpeech lexinfo:determiner .
+</pre>
+<div>
+
+<div class="section" id="sentence-template">
+<h3><a class="toc-backref" href="#id103">2.3 Sentence template</a><a class="headerlink" href="#base-file" title="Permalink to this headline"></a></h3>
+It is necessary to create sentence templates for all syntactic frames (NounPPFrame, TransitiveFrame, IntransitiveFrame, etc.). 
+<pre>
+Sentence templates for NounPPFrame
+
+Example1:
+ verb(imperative_singular) pronoun(Possessive) determiner(the) noun(root) prepositionalAdjunct
+ Give me the capital of Germany/Tell me the capital of Germany
+
+Example2: 
+ verb(imperative_plural) determiner(the) noun(root) prepositionalAdjunct
+ List the rivers of Germany
+
+</pre>
+
+
+<p></p><div>
+
+
+<div class="section" id="recipe-new-language">
+<h3><a class="toc-backref" href="#id104">2.4 Recipe</a><a class="headerlink" href="#base-file" title="Permalink to this headline"></a></h3>
+<pre>
+   For example for langauge German (de). We will cover NounPPFrame syntatic frame.
+   - Create a branch (german) of the <a href="https://github.com/fazleh2010/question-grammar-generator.git">QueGG project</a>. Alternatively, fork the project.
+   - Create a folder src/main/resources/de/base/ and write a base lemon (base.ttl)
+   - Coding:
+     - Create a java class QuestionWordFactoryDE.java at src/main/java/grammar/generator/helper/datasets/questionword/ add question words (such as Interrogative determiner).
+       -Interrogative determiner (i.e. What for english), 
+       -Type (i.e. singular/plural),
+       -Gender (i.e. commonGender if no gender exist, otherwise masculine,feminine,neutral).
+     - Create a java class SentenceTemplateFactoryDE.java at src/main/java/grammar/generator/helper/datasets/sentencetemplates/ and write sentence templates.  
+       - For example for NounPPFrame: 
+             -full sentence: "interrogativePronoun verb(reference:component_be) NP(prepositionalAdjunct)?" 
+             -NP pharse: 
+              -"determiner(reference:component_the_nominative) noun(root:nominativeCase) preposition prepositionalAdjunct" when gender exists 
+     -Modify domain and range: 
+	    - If the langauge has gender phenomena then create a class DomainOrRangeMorphologicalProperties.java at src/main/java/grammar/structure/component/ and category them as per gender.
+            - Otherwise  use existing DomainOrRangeType.java
+     - modify codes LexicalEntryUtil.java for language "de". Write the function getPluralFormDE(); 
+     - Implement the interface interpretSentenceToken at src/main/java/grammar/generator/helper/SentenceBuilderCopulativePP.java 
+   - Write lexical entries for german using the Form discussed in <a href="http://localhost/tutorial/coverage.php#id3">Section 1</a>.
+   - Build and run the program following the <a href="https://github.com/fazleh2010/question-grammar-generator.git">instructions</a>
+</pre>
+<p></p><div>
 
 
 <div class="section" id="coverage">
@@ -323,18 +403,25 @@ Example2:
 <div class="section" id="recipe-new-language">
 <h3><a class="toc-backref" href="#id104">2.4 Recipe</a><a class="headerlink" href="#base-file" title="Permalink to this headline"></a></h3>
 <pre>
-   For example for german (de)
+   For example for langauge German (de). We will cover NounPPFrame syntatic frame.
    - Create a branch (german) of the <a href="https://github.com/fazleh2010/question-grammar-generator.git">QueGG project</a>. Alternatively, fork the project.
-   - Create a folder src/main/resources/de/base/
-   - Create a base lemon at src/main/resources/de/base/
+   - Create a folder src/main/resources/de/base/ and write a base lemon (base.ttl)
    - Coding:
-     - Write lexical entries for german using the Form discussed in <a href="http://localhost/tutorial/coverage.php#id3">Section 1</a>.
-     - Add question words (such as Interrogative determiner) at src/main/java/grammar/generator/helper/datasets/questionword/QuestionWordFactoryDE.java
-     - Add sentences templates at src/main/java/grammar/generator/helper/datasets/sentencetemplates/SentenceTemplateFactoryDE.java  
-     - Add masculine,feminine,neutral objects at src/main/java/grammar/structure/component/DomainOrRangeMorphologicalProperties.java
-     - Add if/else condition for the language at src/main/java/lexicon/LexicalEntryUtil.java 
-     - Modify the codes by adding if/else conditions at TransitiveVPGrammarRuleGenerator.java of package src/main/java/grammar/generator/
-     - Modify the codes  at src/main/java/grammar/generator/helper/SentenceBuilder*.java for all syntactic frames
+     - Create a java class QuestionWordFactoryDE.java at src/main/java/grammar/generator/helper/datasets/questionword/ add question words (such as Interrogative determiner).
+       -Interrogative determiner (i.e. What for english), 
+       -Type (i.e. singular/plural),
+       -Gender (i.e. commonGender if no gender exist, otherwise masculine,feminine,neutral).
+     - Create a java class SentenceTemplateFactoryDE.java at src/main/java/grammar/generator/helper/datasets/sentencetemplates/ and write sentence templates.  
+       - For example for NounPPFrame: 
+             -full sentence: "interrogativePronoun verb(reference:component_be) NP(prepositionalAdjunct)?" 
+             -NP pharse: 
+              -"determiner(reference:component_the_nominative) noun(root:nominativeCase) preposition prepositionalAdjunct" when gender exists 
+     -Modify domain and range: 
+	    - If the langauge has gender phenomena then create a class DomainOrRangeMorphologicalProperties.java at src/main/java/grammar/structure/component/ and category them as per gender.
+            - Otherwise  use existing DomainOrRangeType.java
+     - modify codes LexicalEntryUtil.java for language "de". Write the function getPluralFormDE(); 
+     - Implement the interface interpretSentenceToken at src/main/java/grammar/generator/helper/SentenceBuilderCopulativePP.java 
+   - Write lexical entries for german using the Form discussed in <a href="http://localhost/tutorial/coverage.php#id3">Section 1</a>.
    - Build and run the program following the <a href="https://github.com/fazleh2010/question-grammar-generator.git">instructions</a>
 </pre>
 <p></p><div>

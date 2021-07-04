@@ -54,7 +54,7 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 <body>
 
 <a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/index.php"></a>&nbsp;&nbsp;|&nbsp;
-<a href="https://forms.gle/rTYj75FFUekWcWfM9">Home</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/index.php">Home</a>&nbsp;&nbsp;|&nbsp;
 <a href="https://docs.google.com/document/d/14FRDHF-9kxpyOvBQKJX1KTubmxvLdfLli1UQ7L8wGYo/edit?usp=sharing">Schedule</a>&nbsp;&nbsp;|&nbsp;
 
 
@@ -69,9 +69,8 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 <ul class="simple">
 
 <li><a class="reference internal" href="#docker" id="id400">Getting Started</a><ul>
-<li><a class="reference internal" href="#run-QA" id="id401">Run the QA system on your machine</a></li>
-<li><a class="reference internal" href="#new-questions" id="id402">Add new questions</a></li>
-
+<li><a class="reference internal" href="https://github.com/ag-sc/QueGG-web" id="id401">Run the QA system on your machine</a></li>
+<li><a class="reference internal" href="#coverage" id="id3">Add questions</a><ul>
 </ul>
 </li>
 
@@ -145,12 +144,14 @@ Triple
 http://dbpedia.org/ontology/Country http://dbpedia.org/ontology/capital http://dbpedia.org/ontology/City)
 
 Recipe:
-   (i)  go to the Google XSL sheet <a href="https://docs.google.com/spreadsheets/d/1BdI-OZ38eCwuGfWT9GMKNJFGyWvxwTle16cDFTPgDuQ/edit?usp=sharing">NounPPFrame</a>. 
+   (i)  go to the Google XSL sheet <a href="https://docs.google.com/spreadsheets/d/1BdI-OZ38eCwuGfWT9GMKNJFGyWvxwTle16cDFTPgDuQ/edit?usp=sharing">nounppframe</a>. 
    (ii) input written form of the lexical entry singular and plural.
    (iii input property dbo:capital (http://dbpedia.org/ontology/capital. 
    (iv) input domain dbo:Country (http://dbpedia.org/ontology/Country). 
    (v)  input range dbo:City (http://dbpedia.org/ontology/City).
    (vi) input preposition "of".
+   (vii) download the Google XSL sheet as csv. File > Download >Comma-separated values [.csv, current sheet].
+   (Viii) curl -X "POST" -F "file=@nounppframe.csv" "http://localhost:8089/quegg/import" (in case QA system is running  on your maching)
 </pre>
 
 
@@ -175,13 +176,15 @@ Triple:
 http://dbpedia.org/ontology/Film http://dbpedia.org/ontology/director http://dbpedia.org/ontology/Person
 
 Recipe:
-   (i)   go to the Google XSL sheet <a href="https://docs.google.com/spreadsheets/d/1yiv-zCcXLx87mxMztKXmJVJSkbFsNwbUZEpvmWZ3C58/edit?usp=sharing">TransitiveFrame</a>.
+   (i)   go to the Google XSL sheet <a href="https://docs.google.com/spreadsheets/d/1yiv-zCcXLx87mxMztKXmJVJSkbFsNwbUZEpvmWZ3C58/edit?usp=sharing">transitiveframe</a>.
    (ii)  input infinitive form of the verb (direct).
    (iii) input the 3rd Person form of the verb (directs).
    (iv)  input the past form of the verb (directed).
    (v)   input property dbo: director (http://dbpedia.org/ontology/director). 
    (vi)  input domain dbo:Film (http://dbpedia.org/ontology/Film).
    (vii) input range dbo:Person (http://dbpedia.org/ontology/Person).
+   (vii) download the Google XSL sheet as csv. File > Download> Comma-separated values [.csv, current sheet].
+   (Viii) curl -X "POST" -F "file=@transitiveframe" "http://localhost:8089/quegg/import" (in case QA system is running  on your maching)
 </pre>
 </div>
 
@@ -202,7 +205,7 @@ Triple:
 dbo:River dbo:city dbo:City
 
 Recipe:
-    (i)    go to the <a href="https://docs.google.com/spreadsheets/d/1-SD6GmTCRwtbTIq8ImfcLd_02Gu-wQIqeNyknQ0vbj8/edit?usp=sharing">InTransitivePPFrame</a>.
+    (i)    go to the <a href="https://docs.google.com/spreadsheets/d/1-SD6GmTCRwtbTIq8ImfcLd_02Gu-wQIqeNyknQ0vbj8/edit?usp=sharing">intransitiveppframe</a>.
     (ii)   input infinitve form of the verb "flow".
     (iii)  input 3rd Person form of the verb "flows". 
     (iv)   input past form of verb "flew"
@@ -210,6 +213,8 @@ Recipe:
     (vi)   input domain dbo:River (http://dbpedia.org/ontology/River).
     (vii)  input range dbo:City (http://dbpedia.org/ontology/City).
     (viii) input preposition "through".
+    (vii) download the Google XSL sheet as csv. File > Download > Comma-separated values [.csv, current sheet].
+    (Viii) curl -X "POST" -F "file=@intransitiveppframe" "http://localhost:8089/quegg/import" (in case QA system is running  on your maching)
 </pre>
 </div>
 

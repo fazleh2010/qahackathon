@@ -1,82 +1,169 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>QueGG Question Answering - Resources</title>
+<html> 
+   <head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  border:1px solid black;
+  padding: 10px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+
+    <title>Multilingual Question Answering over Knowledge Graphs building on a model of the lexicon-ontology interface (Multi-QueGG)</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>QueGG</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" integrity="sha512-aQX0wElRuvqZ1bVvsknO9jDXwvVI71vwYLuEDZ8QqMJxPozZPPCCmylpHx4ngmeIz7Bg6FfE4Ay+CfDVFqjy+A==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
+    <link rel="stylesheet" href="http://localhost/qahackathon/tutorial/js/style.css"/>
+
+
 
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
     <div class="navbar-logo col-sm-2">
-        <img src="images/pal-logo.png" class="navbar-logo" />
+        <a href="https://pret-a-llod.github.io/">
+	<img src="http://localhost/qahackathon/tutorial/images/pal-logo.png" align="left" class="navbar-logo" width="200" height="600"/>
+        </a>
     </div>
-    <a class="navbar-brand col-sm" id="sidebar-brandlink" href="/">QueGG Question Answering</a>
+    <a class="navbar-brand col-sm" align="center" id="sidebar-brandlink" href="http://localhost/qahackathon/index.php">Multilingual Question Answering over
+Knowledge Graphs building on a model of the lexicon-ontology interface</a>              
+     <div class="navbar-logo col-sm-2" >
+         <a href="https://nexuslinguarum.eu/">
+         <img src="http://localhost/qahackathon/tutorial/images/nexus-logo.png" align="right" class="navbar-logo" />
+      </div-->
+    
     <!--input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"-->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="nav navbar-nav nav-flex-icons ml-auto px-3">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-        </ul>
-    </div>
 </nav>
 
+<!--div id="kopfbereich_gesamt">
+<div id="kopfbereich_folgeseite">
+<a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/index.php">Home</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://forms.gle/rTYj75FFUekWcWfM9">Registration</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://scdemo.techfak.uni-bielefeld.de/qahackathon/tutorial/coverage.php" target=top>Recipe</a></div></div-->
 
-<div class="container-lg">
-<div id="maincontent" class="col-12" layout:fragment="content">
+</head>
 
-<h3>Source Code</h3>
+<body onload="document.getElementById('statusdisplay').innerHTML = ''" id="top">
 
-<ul>
-<li><a href="https://github.com/fazleh2010/question-grammar-generator">Grammar Generation</a></li>
-<li><a href="https://github.com/ag-sc/QueGG-web">QA Web Application</a></li>
-</ul>
+<div id="kopfbereich_gesamt">
+<div id="kopfbereich_folgeseite">
+<!--a href="http://localhost/qahackathon/index.php">Home</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://forms.gle/rTYj75FFUekWcWfM9">Registration</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://docs.google.com/document/d/14FRDHF-9kxpyOvBQKJX1KTubmxvLdfLli1UQ7L8wGYo/edit?usp=sharing">Schedule</a>&nbsp;&nbsp;|&nbsp;
+<a href="http://localhost/qahackathon/tutorial/coverage.php" target="top">Recipe</a></div></div-->
+	
 
-<h3>QA Demo</h3>
+        <div align="justify">
 
-<ul>
-<li><a href="https://scdemo.techfak.uni-bielefeld.de/quegg/">demo instance</a></li>
-</ul>
+	<p>The project is supported by  <a href="https://pret-a-llod.github.io/">Pret-A-LLOD</a> as well as by <a href="https://nexuslinguarum.eu/">Nexus Linguarum Cost Action</a>. We welcome cross-disciplinary collaborations of computer scientists, computational linguistics and related fields to participate and contribute any level of their interest.</a>
+	<p><strong>Abstract</strong></p>
+        <p>Multilingual Question Answering (QA) has the potential to make the knowledge that is available as linked data accessible across languages. Current state-of-the-art question-answering systems for linked data are nevertheless typically monolingual, supporting in most cases only the English language. As most state-of- the-art systems are based on machine learning techniques, porting such systems to new languages requires a training set for every language that should be supported. Furthermore, most recent QA systems based on machine learning methods lack controllability and extendability, thus making the governance and incremental improvement of these systems challenging, not to mention the initial effort of collecting and providing training data. Towards the development of QA systems that can be ported across languages in a principled manner without the need of training data and towards systems that can be incrementally adapted and improved after deployment, we follow a model-based approach to QA that supports the extension of the lexical and multilingual coverage of a system in a declarative manner. The approach builds on a declarative model of the lexicon ontology OntoLex lemon, which enables to specify the meaning of lexical entries with respect to the vocabulary of a particular dataset. From a specific lexicon describing the meaning of lexical entries with respect to a given vocabulary, in our approach a QA grammar can be automatically generated that can be used to parse questions into SPARQL queries.Furthermore, we demonstrate the extensibility of the approach to different languages by adapting it to German, Italian and Spanish.</p>	
+	<p><strong>Resouces</strong><p>
 
-<h3>Italian LexInfo spreadsheets (read-only)</h3>
-<ul>
-<li><a href="https://docs.google.com/spreadsheets/d/1pd4ggI_jkyF5-tIVHkb7i6De6O6BGn7K_W9D_sOW8dg/edit?usp=sharing">NounPPFrame</a></li>
-<li><a href="https://docs.google.com/spreadsheets/d/1j8gechdvimnRq6x7gR9C-XLjgErq8kBrPX_6XYUnFLs/edit?usp=sharing">TransitiveFrame</a></li>
-<li><a href="https://docs.google.com/spreadsheets/d/1zKXi0teyCewLkIJoGYot8k0ImLKXhK8mGgKTRfV-l28/edit?usp=sharing">IntransitivePPFrame</a></li>
-<li><a href="https://docs.google.com/spreadsheets/d/1AMserU5h3ZN7yB1tqZPedy_oHQI7lkLsaMkU92SdteA/edit?usp=sharing">AdjectiveAttributiveFrame</a></li>
-<li><a href="https://docs.google.com/spreadsheets/d/1AHasHfWUe_00pHptp38x49upo2d6gqJXsIlh2118Y-U/edit?usp=sharing">AdjectiveGradableFrame</a></li>
-</ul>
+<table>
+  <tr>
+    <td><strong>English</strong></td>
+    <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/en/lexicalEntries">Lexical Entries</a> </td>
+    <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/en/sentenceTemplates">Sentence Templates</a></td>
+    <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/en/grammar">Grammar</a></td>
+    <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/en/questions">Questions</a></td>
+    <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/en/evaluation">Evaluation</a></td>
+  </tr>
+  <tr>
+   <td><strong>German</strong></td>
+    <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/de/lexicalEntries">Lexical Entries</a> </td>
+    <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/de/sentenceTemplates">Sentence Templates</a></td>
+    <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/de/grammar">Grammar</a></td>
+    <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/de/questions">Questions</a></td>
+    <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/de/evaluation">Evaluation</a></td>
+
+  </tr>
+  <tr>
+    <td><strong>Italian</strong></td>
+    <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/it/lexicalEntries">Lexical Entries</a> </td>
+    <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/it/sentenceTemplates">Sentence Templates</a></td>
+    <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/it/grammar">Grammar</a></td>
+    <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/it/questions">Questions</a></td>
+    <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/it/evaluation">Evaluation</a></td>
+  </tr>
+  <tr>
+    <td><strong>Spanish</strong></td>
+     <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/es/lexicalEntries">Lexical Entries</a> </td>
+    <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/es/sentenceTemplates">Sentence Templates</a></td>
+    <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/es/grammar">Grammar</a></td>
+    <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/es/questions">Questions</a></td>
+    <td><a href="https://github.com/fazleh2010/multilingual-grammar-generator/tree/main/result/es/evaluation">Evaluation</a></td>
+  </tr>
+</table>
+
+<br/>
+<br/>
+
+         
+	<ul>
+	 <li> <p><strong>Online demo: </strong><a href="https://scdemo.techfak.uni-bielefeld.de/quegg/" data-type="URL" data-id="https://scdemo.techfak.uni-bielefeld.de/quegg/">QA system user interface</a></p>         
+<li> <p><strong>Grammar Generator code: </strong><a href="https://github.com/fazleh2010/question-grammar-generator/" data-type="URL" data-id="https://github.com/fazleh2010/question-grammar-generator/">grammar-generator</a></p>
+<li>         <p><strong>Web Application code: </strong><a href="https://github.com/fazleh2010/question-grammar-generator/" data-type="URL" data-id="https://github.com/fazleh2010/question-grammar-generator/">web-application</a></p>
+	 </ul>
+         </li>
+   
+
+	<p><strong>Publications:</strong></p>
+	<p>Benz, V., Cimiano, P., Elahi, M.F., Ell, B. (2020), <a href="http://ceur-ws.org/Vol-2722/nliwod2020-paper-2.pdf"> Generating Grammars from lemon lexica for Questions Answering over Linked Data: a Preliminary Analysis</a>. In: NLIWOD workshop at ISWC. vol. 2722, pp. 40–55. CEUR-WS.org (2020).</p>
+
+      <p>M.F. Elahi, B. Ell, F. Grimm and P. Cimiano. (2021) <a href="http://ceur-ws.org/Vol-2722/nliwod2020-paper-2.pdf">Question Answering on RDF Data based on Grammars Automatically Gen-
+erated from Lemon Models</a>in: Proceedings of the 17th International Conference on Semantic Systems (SEMANTiCS 2021)</p>
+
+ <p><strong>References:</strong></p>
+       <p>Philipp Cimiano, Paul Buitelaar, John McCrae, Michael Sintek. <a href="https://www.dropbox.com/s/7yio7d9bj0wh32d/LexInfopdf?dl=0">LexInfo: A Declarative Model for the Lexicon-Ontology Interface</a> </p>
+
+       <p>Ricardo Usbeck, Axel-Cyrille Ngonga Ngomo, Bastian Haarmann,Anastasia Krithara, Michael R¨oder, and Giulio Napolitano. <a href="https://www.dropbox.com/s/4wxo2iei5adadck/qald-7.pdf?dl=0">7th Open Challenge on Question Answering over Linked Data (QALD-7) </a>. </p>
+        <p>John P. McCrae, Francesca Quattri, Christina Unger, Philipp Cimiano. <a href="https://www.aclweb.org/anthology/W14-4724.pdf">Modelling the Semantics of Adjectives in the Ontology-Lexicon Interface</a>. Proceedings of the 4th Workshop on Cognitive Aspects of the Lexicon CogALex(2014). </p>
 
 
-<h3> English LexInfo spreadsheets (read-only) </h3>
-<li><a href="https://docs.google.com/spreadsheets/d/1dpes6GACinKVc4tyw3m2YgPb3IFNh-7PiQwhNu7SEuc/edit#gid=0">NounPPFrame</a>
+
+	<p><strong>Contributors</strong></p>
+        <p>Mohammad Fazleh Elahi (CITEC - University Bielefeld, Germany)
+	<br>Philipp Cimiano (CITEC - University Bielefeld, Germany), Chair
+        <br>Basil Ell (CITEC - University Bielefeld, Germany and Department of Informatics, University of Oslo, Norway)
+	<br>Gennaro Nolano (UniOr NLP Research Group, University of Naples "L’Orientale")
+	<br>Wilmar Adrian Granados Cárdenas (University Bielefeld)
+        <br>Frank Grimm (CITEC - University Bielefeld, Germany)<br>
+	</p>
+
+        <p><strong>Contact Information</strong></p>
+        <p>Mohammad Fazleh Elahi <br>
+        e-mail: melahi[at sign]techfak.uni-bielefeld.de</p>
+
+
+  
+
+</div></div>
+</body> 
 
 
 
-</div>
-</div>
-
-
-<footer class="container-fluid">
-    <div class="row">
-        <div class="col-md">
-            <p class="text-muted">
-                &copy; 2021 <a href="http://www.sc.cit-ec.uni-bielefeld.de/home/">Semantic Computing Group @ CITEC</a>. All rights reserved.
-            </p>
-        </div>
-    </div>
-</footer>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js" integrity="sha512-Bbn2GxMX2ePx4if/heU6eS4avbu2ac+V1q2jb4mlh1WofyrKV/vm6/mMWmuzgoHQlxvgg7dPuyTtTZSX/Zgk3Q==" crossorigin="anonymous"></script>
-</body>
 </html>
+
